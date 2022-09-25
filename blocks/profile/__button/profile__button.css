@@ -1,9 +1,10 @@
 .profile__button {
+    /*background-image: url("../../../images/plus.png") center no-repeat;*/
+    background-color: black;
     margin-top: 75px;
     margin-left: 0;
     padding: 0;
     width: 150px;
     height: 50px;
     border: 2px solid #FFFFFF;
-    border-radius: 2px;
 }
