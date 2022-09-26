@@ -4,4 +4,22 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
 }
+
+
+@media screen and (max-width: 767px) {
+    .profile {
+         flex-direction: column;
+         align-items: center;
+       /* grid-template-columns: 1fr auto;*/
+    /*    display: grid;
+        grid-template-areas:
+       "profile__avatar"
+       "profile__title profile__edit-button"
+       "profile__subtitle"
+       "profile__button";*/
+    }
+}
+
+

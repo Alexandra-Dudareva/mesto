@@ -15,9 +15,12 @@
         <div class="profile__container">
             <img class="profile__avatar" src="images/kusto.jpg" alt="Аватар">
             <div class="profile__info">
-                <h1 class="profile__title">Жак-Ив Кусто</h1>
-                <p class="profile__subtitle">Исследователь океана</p>
+                <h1 class="profile__name">Жак-Ив Кусто</h1>
+                <p class="profile__status">Исследователь океана</p>
             </div>
+            <button class="profile__edit-button profile__open-popup" type="button" aria-label="Редактировать профиль">
+                <img class="profile__edit-button_img" src="images/edit_button.svg" alt="Кнопка редактирования профиля">
+            </button>
         </div>
         <button class="profile__button" type="button" aria-label="Добавить изображение">
             <img class="profile__button_img" src="images/plus.png" alt="Кнопка">
@@ -68,8 +71,22 @@
         </div>
     </section>
 </main>
+<section class="popup">
+    <div class="popup__container">
+        <img class="popup__close" src="images/close_icon.png" alt="Закрыть">
+        <h2 class="popup__title">Редактировать профиль</h2>
+        <form class="form" id="profileForm">
+            <div class="form__input">
+                <input class="form__name" type="text" placeholder="Имя">
+                <input class="form__status" type="text" placeholder="Статус">
+            </div>
+            <button class="popup__save-button" type="submit">Сохранить</button>
+        </form>
+    </div>
+</section>
 <footer class="footer">
     <p class="footer__text">© 2020 Mesto Russia</p>
 </footer>
 </body>
+<script type="text/javascript" src="scripts/index.js"></script>
 </html>

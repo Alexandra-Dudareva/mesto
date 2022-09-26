@@ -1,5 +1,4 @@
 .profile__button {
-    /*background-image: url("../../../images/plus.png") center no-repeat;*/
     background-color: black;
     margin-top: 75px;
     margin-left: 0;
@@ -7,4 +6,18 @@
     width: 150px;
     height: 50px;
     border: 2px solid #FFFFFF;
+    cursor: pointer;
+    grid-area: profile__button;
+}
+
+.profile__button:hover {
+    opacity: .6;
+    transition: opacity .3s ease;
+}
+
+
+@media screen and (max-width: 767px) {
+    .profile__button {
+        min-width: 282px;
+    }
 }
