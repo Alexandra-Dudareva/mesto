@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dca68fb3-6bfa-46f0-924d-a0ff1c826df9" name="Changes" comment="Александра Дударева. Проектная работа 4, версия 1.">
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__button/_img/profile__button_img.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/__button/_img/profile__button-img.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__edit-button/edit-button_img/profile__edit-button_img.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/__edit-button/edit-button_img/profile__edit-button-img.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +89,7 @@
       <updated>1664040838138</updated>
       <workItem from="1664040841311" duration="17948000" />
       <workItem from="1664060843025" duration="6670000" />
-      <workItem from="1664123008062" duration="29886000" />
+      <workItem from="1664123008062" duration="30203000" />
     </task>
     <task id="LOCAL-00001" summary="Александра Дударева. Проектная работа 4, версия 1.">
       <created>1664061164283</created>
@@ -130,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664161698320</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Александра Дударева. Проектная работа 4, версия 1.">
+      <created>1664162020349</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1664162020349</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
