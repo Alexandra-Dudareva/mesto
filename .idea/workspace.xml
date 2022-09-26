@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dca68fb3-6bfa-46f0-924d-a0ff1c826df9" name="Changes" comment="Александра Дударева. Проектная работа 4, версия 1." />
+    <list default="true" id="dca68fb3-6bfa-46f0-924d-a0ff1c826df9" name="Changes" comment="Александра Дударева. Проектная работа 4, версия 1.">
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,7 +86,7 @@
       <updated>1664040838138</updated>
       <workItem from="1664040841311" duration="17948000" />
       <workItem from="1664060843025" duration="6670000" />
-      <workItem from="1664123008062" duration="28990000" />
+      <workItem from="1664123008062" duration="29409000" />
     </task>
     <task id="LOCAL-00001" summary="Александра Дударева. Проектная работа 4, версия 1.">
       <created>1664061164283</created>
@@ -114,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664160852393</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Александра Дударева. Проектная работа 4, версия 1.">
+      <created>1664161155082</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1664161155082</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
