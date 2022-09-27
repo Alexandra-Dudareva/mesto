@@ -11,6 +11,13 @@ popupToggle = function () {
     popup.classList.toggle('popup__opened');
 }
 
+popupOpenHandler = function () {
+    inputName.value = profileName.textContent;
+    inputStatus.value = profileStatus.textContent;
+
+    popupToggle();
+}
+
 formSubmitHandler = function (evt) {
     evt.preventDefault();
 
@@ -22,8 +29,7 @@ formSubmitHandler = function (evt) {
 
 profileForm.addEventListener('submit', formSubmitHandler);
 
-popupOpenButton.addEventListener('click', popupToggle);
+popupOpenButton.addEventListener('click', popupOpenHandler);
 
 popupCloseButton.addEventListener('click', popupToggle);
-
 

@@ -23,67 +23,67 @@
             </button>
         </div>
         <button class="profile__button" type="button" aria-label="Добавить изображение">
-            <img class="profile__button-img" src="images/plus.png" alt="Кнопка">
+            <img class="profile__button-img" src="images/plus.svg" alt="Кнопка">
         </button>
     </section>
     <section class="elements">
         <div class="element">
             <img class="element__image" src="images/karachaevsk.jpg" alt="Храм в Карачаевске">
             <div class="element__container">
-                <p class="element__text">Карачаевск</p>
+                <h2 class="element__text">Карачаевск</h2>
                 <button class="element__button" type="button" aria-label="Поставить лайк"></button>
             </div>
         </div>
         <div class="element">
             <img class="element__image" src="images/elbrus.png" alt="Эльбрус">
             <div class="element__container">
-                <p class="element__text">Гора Эльбрус</p>
+                <h2 class="element__text">Гора Эльбрус</h2>
                 <button class="element__button" type="button" aria-label="Поставить лайк"></button>
             </div>
         </div>
         <div class="element">
             <img class="element__image" src="images/dombay.png" alt="Домбай">
             <div class="element__container">
-                <p class="element__text">Домбай</p>
+                <h2 class="element__text">Домбай</h2>
                 <button class="element__button" type="button" aria-label="Поставить лайк"></button>
             </div>
         </div>
         <div class="element">
             <img class="element__image" src="images/elbrus.png" alt="Эльбрус">
             <div class="element__container">
-                <p class="element__text">Гора Эльбрус</p>
+                <h2 class="element__text">Гора Эльбрус</h2>
                 <button class="element__button" type="button" aria-label="Поставить лайк"></button>
             </div>
         </div>
         <div class="element">
             <img class="element__image" src="images/dombay.png" alt="Домбай">
             <div class="element__container">
-                <p class="element__text">Домбай</p>
+                <h2 class="element__text">Домбай</h2>
                 <button class="element__button" type="button" aria-label="Поставить лайк"></button>
             </div>
         </div>
         <div class="element">
             <img class="element__image" src="images/karachaevsk.jpg" alt="Храм в Карачаевске">
             <div class="element__container">
-                <p class="element__text">Карачаевск</p>
+                <h2 class="element__text">Карачаевск</h2>
                 <button class="element__button" type="button" aria-label="Поставить лайк"></button>
             </div>
         </div>
     </section>
 </main>
-<section class="popup">
+<div class="popup">
     <div class="popup__container">
-        <img class="popup__close" src="images/close_icon.png" alt="Закрыть">
+        <button class="popup__close" type="button" aria-label="Закрыть"></button>
         <h2 class="popup__title">Редактировать профиль</h2>
         <form class="form" id="profileForm">
             <div class="form__input">
-                <input class="form__name" type="text" placeholder="Имя">
-                <input class="form__status" type="text" placeholder="Статус">
+                <input class="form__name" type="text" name="name" placeholder="Имя">
+                <input class="form__status" type="text" name="status" placeholder="Статус">
             </div>
-            <button class="popup__save-button" type="submit">Сохранить</button>
+            <button class="form__save-button" type="submit">Сохранить</button>
         </form>
     </div>
-</section>
+</div>
 <footer class="footer">
     <p class="footer__text">© 2020 Mesto Russia</p>
 </footer>
