@@ -6,6 +6,7 @@
     width: 150px;
     height: 50px;
     border: 2px solid #FFFFFF;
+    border-radius: 2px;
     cursor: pointer;
     grid-area: profile__button;
 }

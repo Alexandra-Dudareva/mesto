@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dca68fb3-6bfa-46f0-924d-a0ff1c826df9" name="Changes" comment="Александра Дударева. Проектная работа 4, версия 1.">
+    <list default="true" id="dca68fb3-6bfa-46f0-924d-a0ff1c826df9" name="Changes" comment="Александра Дударева. Проектная работа 4, версия 2.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blocks/element/__container/element__container.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/element/__container/element__container.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/elements/elements.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/elements/elements.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/footer/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/footer/footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/form/__name/form__name.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/form/__name/form__name.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/form/__status/form__status.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/form/__status/form__status.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__close/popup__close.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__close/popup__close.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__save-button/popup__save-button.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/form/__save-button/form__save-button.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/border.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/close_icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/plus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/element/__image/element__image.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/element/__image/element__image.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/form/__save-button/form__save-button.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/form/__save-button/form__save-button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__container/popup__container.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__container/popup__container.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__avatar/profile__avatar.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/__avatar/profile__avatar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__button/profile__button.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/__button/profile__button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/open-popup/profile__open-popup.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +95,8 @@
       <workItem from="1664040841311" duration="17948000" />
       <workItem from="1664060843025" duration="6670000" />
       <workItem from="1664123008062" duration="30317000" />
-      <workItem from="1664222139999" duration="7090000" />
+      <workItem from="1664222139999" duration="7899000" />
+      <workItem from="1664575862693" duration="3746000" />
     </task>
     <task id="LOCAL-00001" summary="Александра Дударева. Проектная работа 4, версия 1.">
       <created>1664061164283</created>
@@ -159,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664162275792</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Александра Дударева. Проектная работа 4, версия 2.">
+      <created>1664240391539</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1664240391539</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,6 +180,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Александра Дударева. Проектная работа 4, версия 1." />
-    <option name="LAST_COMMIT_MESSAGE" value="Александра Дударева. Проектная работа 4, версия 1." />
+    <MESSAGE value="Александра Дударева. Проектная работа 4, версия 2." />
+    <option name="LAST_COMMIT_MESSAGE" value="Александра Дударева. Проектная работа 4, версия 2." />
   </component>
 </project>
