@@ -1,14 +1,14 @@
-const popupOpenButton = document.querySelector('.profile__open-popup');
+const popupOpenButton = document.querySelector('.profile__edit-button');
 const popup = document.querySelector('.popup');
 const popupCloseButton = popup.querySelector('.popup__close');
 const profileName = document.querySelector('.profile__name');
 const profileStatus = document.querySelector('.profile__status');
 const profileForm = popup.querySelector('.form');
-const inputName = profileForm.querySelector('.form__name');
-const inputStatus = profileForm.querySelector('.form__status');
+const inputName = profileForm.querySelector('.form__input_type_name');
+const inputStatus = profileForm.querySelector('.form__input_type_status');
 
 popupToggle = function () {
-    popup.classList.toggle('popup__opened');
+    popup.classList.toggle('popup_opened');
 }
 
 popupOpenHandler = function () {

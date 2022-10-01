@@ -1,14 +1,21 @@
 .elements{
     max-width: 880px;
-    margin: 47.25px auto 0 auto;
+    margin: 47px auto 0 auto;
     display: grid;
-    grid-template-rows: repeat(2, 361px);
-    grid-template-columns: repeat(auto-fit, 282px);
+    grid-template-columns: repeat(3, 282px);
     gap: 20px 17px;
+}
+
+@media screen and (max-width: 1023px) {
+    .elements {
+        max-width: 584px;
+        grid-template-columns: repeat(2, 282px);
+    }
 }
 
 @media screen and (max-width: 767px) {
     .elements {
-        min-height: 320px;
+        max-width: 282px;
+        grid-template-columns: repeat(1, 282px);
     }
 }
