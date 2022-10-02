@@ -1,4 +1,4 @@
-.footer{
+.footer {
     margin: 67px auto 60px auto;
     max-width: 880px;
 }
@@ -7,5 +7,12 @@
     .footer {
         max-width: 100%;
         margin-left: 27px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .footer {
+        margin: 48px auto 36px auto;
+        max-width: 282px;
     }
 }

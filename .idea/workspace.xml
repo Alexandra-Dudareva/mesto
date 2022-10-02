@@ -4,6 +4,24 @@
     <list default="true" id="dca68fb3-6bfa-46f0-924d-a0ff1c826df9" name="Changes" comment="Александра Дударева. Проектная работа 4, версия 2.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blocks/element/__button/element__button.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/element/__button/element__button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/elements/elements.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/elements/elements.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/footer/__text/footer__text.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/footer/__text/footer__text.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/footer/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/footer/footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/form/__input/form__input.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/form/__input/form__input.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/form/__inputs/form__inputs.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/form/__inputs/form__inputs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/form/__save-button/form__save-button.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/form/__save-button/form__save-button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/header/__logo/header__logo.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/header/__logo/header__logo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__close/popup__close.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__close/popup__close.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__container/popup__container.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__container/popup__container.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__title/popup__title.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__title/popup__title.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/popup.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/popup.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__add-button-image/profile__add-button-image.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/__add-button-image/profile__add-button-image.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__add-button/profile__add-button.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/__add-button/profile__add-button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__avatar/profile__avatar.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/__avatar/profile__avatar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__edit-button-image/profile__edit-button-image.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/__edit-button-image/profile__edit-button-image.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__edit-button/profile__edit-button.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/__edit-button/profile__edit-button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__info/profile__info.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/__info/profile__info.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__name-container/profile__name-container.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/__name-container/profile__name-container.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blocks/profile/__name/profile__name.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/__name/profile__name.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blocks/profile/__status/profile__status.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/__status/profile__status.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
@@ -95,7 +113,8 @@
       <workItem from="1664123008062" duration="30317000" />
       <workItem from="1664222139999" duration="7899000" />
       <workItem from="1664575862693" duration="3953000" />
-      <workItem from="1664637234385" duration="8365000" />
+      <workItem from="1664637234385" duration="8675000" />
+      <workItem from="1664738617971" duration="12878000" />
     </task>
     <task id="LOCAL-00001" summary="Александра Дударева. Проектная работа 4, версия 1.">
       <created>1664061164283</created>
@@ -174,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664644479435</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Александра Дударева. Проектная работа 4, версия 2.">
+      <created>1664645970695</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1664645970695</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
