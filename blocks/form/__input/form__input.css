@@ -7,9 +7,8 @@
     line-height: 17px;
     color: #000000;
     width: 358px;
-    height: 27px;
     margin: 30px 36px 0 36px;
-    padding: 0;
+    padding: 0 0 10px 0;
 }
 
 .form__input:focus {
@@ -27,7 +26,6 @@
 @media screen and (max-width: 797px) {
     .form__input {
         width: 238px;
-        height: 14px;
-        margin: 43px 22px 0 22px;
+        margin: 30px 22px 0 22px;
     }
 }
