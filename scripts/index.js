@@ -7,6 +7,10 @@ const profileForm = popup.querySelector('.form');
 const inputName = profileForm.querySelector('.form__input_type_name');
 const inputStatus = profileForm.querySelector('.form__input_type_status');
 
+/*ПР5. Кнопка лайк*/
+const likeButton = document.querySelector(".element__like-button");
+
+/*ПР 4*/
 popupToggle = function () {
     popup.classList.toggle('popup_opened');
 }
@@ -27,9 +31,19 @@ formSubmitHandler = function (evt) {
     popupToggle();
 }
 
+/*ПР5. Кнопка лайк*/
+
+likeToggle = function (){
+    likeButton.classList.toggle('element__like-button_active');
+}
+
+
+/*ПР 4*/
 profileForm.addEventListener('submit', formSubmitHandler);
 
 popupOpenButton.addEventListener('click', popupOpenHandler);
 
 popupCloseButton.addEventListener('click', popupToggle);
 
+/*ПР5. Кнопка лайк*/
+likeButton.addEventListener('click', likeToggle);

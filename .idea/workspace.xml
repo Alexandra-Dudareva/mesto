@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dca68fb3-6bfa-46f0-924d-a0ff1c826df9" name="Changes" comment="Александра Дударева. Проектная работа 4, версия 2.">
+      <change afterPath="$PROJECT_DIR$/blocks/element/__like-button/_active/element__like-button_active.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blocks/element/__trash-button/element__trash-button.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/element/__button/element__button.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/element/__like-button/element__like-button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +46,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Александра\Desktop\projects\mesto\blocks\element\__like-button\_active" />
       <recent name="C:\Users\Александра\Desktop\projects\mesto\blocks\profile" />
       <recent name="C:\Users\Александра\Desktop\projects\mesto\blocks\form" />
       <recent name="C:\Users\Александра\Desktop\projects\mesto\scripts" />
@@ -95,6 +102,11 @@
       <workItem from="1664738617971" duration="13269000" />
       <workItem from="1664825085496" duration="790000" />
       <workItem from="1664913302507" duration="3267000" />
+      <workItem from="1664969476791" duration="604000" />
+      <workItem from="1665418958675" duration="36000" />
+      <workItem from="1665419046379" duration="6643000" />
+      <workItem from="1665611706633" duration="960000" />
+      <workItem from="1665613695213" duration="7926000" />
     </task>
     <task id="LOCAL-00001" summary="Александра Дударева. Проектная работа 4, версия 1.">
       <created>1664061164283</created>
@@ -201,7 +213,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664917504875</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Александра Дударева. Проектная работа 4, версия 2.">
+      <created>1664969679750</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1664969679750</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Александра Дударева. Проектная работа 4, версия 2.">
+      <created>1664969703195</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1664969703195</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
