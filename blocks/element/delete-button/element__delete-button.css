@@ -1,4 +1,4 @@
-.element__trash-button {
+.element__delete-button {
     background: url(../../../images/trash.svg) no-repeat;
     height: 19px;
     width: 18px;
@@ -11,7 +11,7 @@
 
 }
 
-.element__trash-button:hover {
+.element__delete-button:hover {
     transition: opacity .3s ease;
     opacity: .6;
 }
