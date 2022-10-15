@@ -11,7 +11,10 @@ const inputStatus = profileForm.querySelector('.form__input_type_status');
 const likeButton = document.querySelector(".element__like-button");
 
 /*ПР5. Открытие картинки*/
-const OpenImageButton = document.querySelector(".element__image");
+const openImageButton = document.querySelector(".element__image");
+
+const imagePopup = document.querySelector("#imagePopup")
+const imagePopupClose = document.querySelector("#imagePopupClose")
 
 /*ПР 4*/
 popupToggle = function () {
@@ -42,7 +45,12 @@ likeToggle = function (){
 
 /*ПР5. Открытие картинки*/
 openImageToggle = function (){
-    OpenImageButton.classList.toggle('popup_opened');
+    imagePopup.classList.toggle('popup_opened');
+}
+
+/*ПР5. Закрытие картинки*/
+closeImageToggle = function () {
+    imagePopup.classList.toggle('popup_opened');
 }
 
 /*ПР 4*/
@@ -56,4 +64,7 @@ popupCloseButton.addEventListener('click', popupToggle);
 likeButton.addEventListener('click', likeToggle);
 
 /*ПР5. Открытие картинки*/
-OpenImageButton.addEventListener('click', openImageToggle);
+openImageButton.addEventListener('click', openImageToggle);
+
+/*ПР5. Закрытие картинки*/
+imagePopupClose.addEventListener('click', closeImageToggle);
