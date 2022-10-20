@@ -1,17 +1,17 @@
-const popupOpenButton = document.querySelector('.profile__edit-button');
-const popup = document.querySelector('.popup');
-const popupCloseButton = popup.querySelector('.popup__close-button');
+const editPopupOpenButton = document.querySelector('.profile__edit-button');
+const profilePopup = document.querySelector('#profilePopup');
+const popupCloseButton = document.querySelector('.popup__close-button');
 const profileName = document.querySelector('.profile__name');
 const profileStatus = document.querySelector('.profile__status');
-const profileForm = popup.querySelector('.form');
+const profileForm = document.querySelector('.form');
 const inputName = profileForm.querySelector('.form__input_type_name');
 const inputStatus = profileForm.querySelector('.form__input_type_status');
 
 /*ПР5. Кнопка лайк*/
-const likeButton = document.querySelector(".element__like-button");
+
 
 /*ПР5. Открытие  и закрытие картинки*/
-const openImageButton = document.querySelector(".element__image");
+
 
 const imagePopup = document.querySelector("#imagePopup");
 const imagePopupClose = document.querySelector("#imagePopupClose");
@@ -48,15 +48,15 @@ const initialCards = [
 ];
 
 /*ПР 4*/
-popupToggle = function () {
+popupToggle = function (popup) {
     popup.classList.toggle('popup_opened');
 }
 
-popupOpenHandler = function () {
+editPopupOpenHandler = function () {
     inputName.value = profileName.textContent;
     inputStatus.value = profileStatus.textContent;
 
-    popupToggle();
+    popupToggle(profilePopup);
 }
 
 formSubmitHandler = function (evt) {
@@ -68,24 +68,15 @@ formSubmitHandler = function (evt) {
     popupToggle();
 }
 
-/*ПР5. Кнопка лайк*/
-
 likeToggle = function () {
     likeButton.classList.toggle('element__like-button_active');
 }
 
-/*ПР5. Открытие картинки*/
-openImageToggle = function () {
-    imagePopup.classList.toggle('popup_opened');
-}
-
-/*ПР5. Закрытие картинки*/
 closeImageToggle = function () {
     imagePopup.classList.toggle('popup_opened');
 }
 
-/*ПР5. Карточки из коробки*/
-const createItemNode = (name, link) => {
+createItemNode = (name, link) => {
     const currentItem = template.content.querySelector('.element').cloneNode(true);
     const currentName = currentItem.querySelector('.element__text');
     const currentLink = currentItem.querySelector('.element__image');
@@ -95,7 +86,7 @@ const createItemNode = (name, link) => {
     return currentItem;
 };
 
-const render = () => {
+render = () => {
     initialCards.forEach((item) => {
         const currentItem = createItemNode(item.name, item.link);
         cardsContainer.append(currentItem);
@@ -104,19 +95,32 @@ const render = () => {
 
 render();
 
+const likeButton = document.querySelector(".element__like-button");
+const imagePopupOpenButton = document.querySelector("#elementImage");
 
-/*ПР 4*/
+
+
+const closeAllPopups = function (){
+    document.querySelector('.popup_opened').classList.remove('popup_opened');
+}
+
 profileForm.addEventListener('submit', formSubmitHandler);
 
-popupOpenButton.addEventListener('click', popupOpenHandler);
+editPopupOpenButton.addEventListener('click', editPopupOpenHandler);
 
-popupCloseButton.addEventListener('click', popupToggle);
+popupCloseButton.addEventListener('click', closeAllPopups);
 
-/*ПР5. Кнопка лайк*/
 likeButton.addEventListener('click', likeToggle);
 
-/*ПР5. Открытие картинки*/
-openImageButton.addEventListener('click', openImageToggle);
+imagePopupOpenButton.addEventListener('click', ()=>{popupToggle(imagePopup)});
 
-/*ПР5. Закрытие картинки*/
-imagePopupClose.addEventListener('click', closeImageToggle);
+imagePopupClose.addEventListener('click', closeAllPopups);
+
+
+/*
+ 1. Добавить eventLister к форме, тип события - submit, при срабатывании события вызывается функция addNewCard.
+ 2. Объявляем функцию addNewCard.
+ 3. Пишем PreventDefault (смотри функцию formSubmitHandler для примера).
+ 4. С помощью метода value записываем значения инпутов в переменные (смотри функцию formSubmitHandler для примера).
+ 5. Внутри addNewItem вызываем функцию createItemNode с параметрами, равными переменным из пункта 3, записав ее вызов в переменную (смотри функцию render для примера)
+ 6. Вывести карточку на экран с помощью метода append (смотри функцию render для примера)*/
