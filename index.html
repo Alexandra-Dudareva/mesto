@@ -48,8 +48,21 @@
 <div class="popup" id="imagePopup">
     <div class="popup-img__container">
         <img class="popup-img__photo" src="images/karachaevsk.jpg" alt="Фото">
-        <button class="popup__close-button" id="imagePopupClose"  type="button" aria-label="Закрыть"></button>
+        <button class="popup__close-button" id="imagePopupCloseButton"  type="button" aria-label="Закрыть"></button>
         <h2 class="popup-img__title">Карачаевск</h2>
+    </div>
+</div>
+<div class="popup" id="addCardPopup">
+    <div class="popup__container">
+        <button class="popup__close-button" id="addPopupCloseButton" type="button" aria-label="Закрыть"></button>
+        <h2 class="popup__title">Новое место</h2>
+        <form class="form" id="addPhotoForm" name="addPhotoForm">
+            <div class="form__inputs">
+                <input class="form__input form__input_place-name" type="text" name="place-name" placeholder="Название">
+                <input class="form__input form__input_type_link" type="link" name="link" placeholder="Ссылка на картинку">
+            </div>
+            <button class="form__save-button"  type="submit">Создать</button>
+        </form>
     </div>
 </div>
 <footer class="footer">

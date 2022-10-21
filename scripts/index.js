@@ -6,19 +6,19 @@ const profileStatus = document.querySelector('.profile__status');
 const profileForm = document.querySelector('.form');
 const inputName = profileForm.querySelector('.form__input_type_name');
 const inputStatus = profileForm.querySelector('.form__input_type_status');
-
-/*ПР5. Кнопка лайк*/
-
-
-/*ПР5. Открытие  и закрытие картинки*/
-
-
 const imagePopup = document.querySelector("#imagePopup");
-const imagePopupClose = document.querySelector("#imagePopupClose");
-
-/*ПР5. Карточки из коробки*/
+const imagePopupCloseButton = document.querySelector("#imagePopupCloseButton");
+const addCardPopupCloseButton = document.querySelector("#addPopupCloseButton");
 const cardsContainer = document.querySelector('.elements');
 const template = document.querySelector('#template');
+const addPopupOpenButton = document.querySelector('.profile__add-button');
+const addCardPopup = document.querySelector('#addCardPopup');
+const inputPlaceName = profileForm.querySelector('.form__input_place-name');
+const inputPlaceLink = profileForm.querySelector('.form__input_type_link');
+
+const placeName = document.querySelector('.element__text');
+const placeLink = document.querySelector('#elementImage');
+const card = document.querySelector('.element');
 
 const initialCards = [
     {
@@ -99,22 +99,38 @@ const likeButton = document.querySelector(".element__like-button");
 const imagePopupOpenButton = document.querySelector("#elementImage");
 
 
-
-const closeAllPopups = function (){
+const closeAllPopups = function () {
     document.querySelector('.popup_opened').classList.remove('popup_opened');
+}
+
+addNewCard = function (evt) {
+    evt.preventDefault();
+    placeName.textContent = inputPlaceName.value;
+    placeLink.src = inputPlaceLink.value;
+    const currentCard = createItemNode(item.inputPlaceName, item.inputPlaceLink);
+    card.append(currentCard);
 }
 
 profileForm.addEventListener('submit', formSubmitHandler);
 
 editPopupOpenButton.addEventListener('click', editPopupOpenHandler);
 
-popupCloseButton.addEventListener('click', closeAllPopups);
 
 likeButton.addEventListener('click', likeToggle);
 
-imagePopupOpenButton.addEventListener('click', ()=>{popupToggle(imagePopup)});
+imagePopupOpenButton.addEventListener('click', () => {
+    popupToggle(imagePopup)
+});
 
-imagePopupClose.addEventListener('click', closeAllPopups);
+imagePopupCloseButton.addEventListener('click', closeAllPopups);
+popupCloseButton.addEventListener('click', closeAllPopups);
+addCardPopupCloseButton.addEventListener('click', closeAllPopups);
+
+addPopupOpenButton.addEventListener('click', () => {
+    popupToggle(addCardPopup)
+});
+
+addCardPopup.addEventListener('submit', addNewCard);
 
 
 /*
