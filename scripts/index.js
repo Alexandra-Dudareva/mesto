@@ -13,12 +13,9 @@ const cardsContainer = document.querySelector('.elements');
 const template = document.querySelector('#template');
 const addPopupOpenButton = document.querySelector('.profile__add-button');
 const addCardPopup = document.querySelector('#addCardPopup');
-const inputPlaceName = profileForm.querySelector('.form__input_place-name');
-const inputPlaceLink = profileForm.querySelector('.form__input_type_link');
-
-const placeName = document.querySelector('.element__text');
-const placeLink = document.querySelector('#elementImage');
-const card = document.querySelector('.element');
+const inputPlaceName = document.querySelector('.form__input_place-name');
+const inputPlaceLink = document.querySelector('.form__input_type_link');
+const addCardForm = document.querySelector('#addCardForm')
 
 const initialCards = [
     {
@@ -105,10 +102,13 @@ const closeAllPopups = function () {
 
 addNewCard = function (evt) {
     evt.preventDefault();
-    placeName.textContent = inputPlaceName.value;
-    placeLink.src = inputPlaceLink.value;
-    const currentCard = createItemNode(item.inputPlaceName, item.inputPlaceLink);
-    card.append(currentCard);
+
+    const name = inputPlaceName.value;
+    const link = inputPlaceLink.value;
+    const newCard = createItemNode(name, link);
+    cardsContainer.prepend(newCard);
+
+    closeAllPopups();
 }
 
 profileForm.addEventListener('submit', formSubmitHandler);
@@ -130,7 +130,7 @@ addPopupOpenButton.addEventListener('click', () => {
     popupToggle(addCardPopup)
 });
 
-addCardPopup.addEventListener('submit', addNewCard);
+addCardForm.addEventListener('submit', addNewCard);
 
 
 /*
