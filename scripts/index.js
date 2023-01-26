@@ -15,7 +15,7 @@ const addPopupOpenButton = document.querySelector('.profile__add-button');
 const addCardPopup = document.querySelector('#addCardPopup');
 const inputPlaceName = document.querySelector('.form__input_place-name');
 const inputPlaceLink = document.querySelector('.form__input_type_link');
-const addCardForm = document.querySelector('#addCardForm')
+const addCardForm = document.querySelector('#addCardForm');
 
 const initialCards = [
     {
@@ -65,20 +65,40 @@ formSubmitHandler = function (evt) {
     popupToggle();
 }
 
-likeToggle = function () {
-    likeButton.classList.toggle('element__like-button_active');
-}
-
 closeImageToggle = function () {
     imagePopup.classList.toggle('popup_opened');
 }
+
+likeToggle = function (e) {
+    const currentLB = e.target.closest('.element__like-button');
+    currentLB.classList.toggle('element__like-button_active');
+}
+
+handleDeleteItem = (e) => {
+    const currentEl = e.target.closest('.element');
+    currentEl.remove();
+};
+
+openImagePopup = (name, link) => {
+    imagePopup.querySelector('.popup-img__title').textContent = name;
+    imagePopup.querySelector('.popup-img__photo').src = link;
+    popupToggle(imagePopup);
+};
 
 createItemNode = (name, link) => {
     const currentItem = template.content.querySelector('.element').cloneNode(true);
     const currentName = currentItem.querySelector('.element__text');
     const currentLink = currentItem.querySelector('.element__image');
+    const deleteBtn = currentItem.querySelector('.element__delete-button');
+    const likeButton = currentItem.querySelector('.element__like-button');
+    const imagePopupOpenButton = currentItem.querySelector('#elementImage');
+
     currentName.textContent = name;
     currentLink.src = link;
+
+    likeButton.addEventListener('click', likeToggle);
+    imagePopupOpenButton.addEventListener('click', () => openImagePopup(name, link));
+    deleteBtn.addEventListener('click', handleDeleteItem);
 
     return currentItem;
 };
@@ -91,9 +111,6 @@ render = () => {
 };
 
 render();
-
-const likeButton = document.querySelector(".element__like-button");
-const imagePopupOpenButton = document.querySelector("#elementImage");
 
 
 const closeAllPopups = function () {
@@ -115,15 +132,10 @@ profileForm.addEventListener('submit', formSubmitHandler);
 
 editPopupOpenButton.addEventListener('click', editPopupOpenHandler);
 
-
-likeButton.addEventListener('click', likeToggle);
-
-imagePopupOpenButton.addEventListener('click', () => {
-    popupToggle(imagePopup)
-});
-
 imagePopupCloseButton.addEventListener('click', closeAllPopups);
+
 popupCloseButton.addEventListener('click', closeAllPopups);
+
 addCardPopupCloseButton.addEventListener('click', closeAllPopups);
 
 addPopupOpenButton.addEventListener('click', () => {
@@ -133,10 +145,5 @@ addPopupOpenButton.addEventListener('click', () => {
 addCardForm.addEventListener('submit', addNewCard);
 
 
-/*
- 1. Добавить eventLister к форме, тип события - submit, при срабатывании события вызывается функция addNewCard.
- 2. Объявляем функцию addNewCard.
- 3. Пишем PreventDefault (смотри функцию formSubmitHandler для примера).
- 4. С помощью метода value записываем значения инпутов в переменные (смотри функцию formSubmitHandler для примера).
- 5. Внутри addNewItem вызываем функцию createItemNode с параметрами, равными переменным из пункта 3, записав ее вызов в переменную (смотри функцию render для примера)
- 6. Вывести карточку на экран с помощью метода append (смотри функцию render для примера)*/
+
+
