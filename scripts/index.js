@@ -80,8 +80,8 @@ handleDeleteItem = (e) => {
 };
 
 openImagePopup = (name, link) => {
-    imagePopup.querySelector('.popup-img__title').textContent = name;
-    imagePopup.querySelector('.popup-img__photo').src = link;
+    imagePopup.querySelector('.popup__img-title').textContent = name;
+    imagePopup.querySelector('.popup__img-photo').src = link;
     popupToggle(imagePopup);
 };
 

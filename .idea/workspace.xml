@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dca68fb3-6bfa-46f0-924d-a0ff1c826df9" name="Changes" comment="Александра Дударева. Проектная работа 5, версия 2.">
+      <change afterPath="$PROJECT_DIR$/blocks/popup/__img-close/popup__img-close.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/element/delete-button/element__delete-button.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/element/delete-button/element__delete-button.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/_opened/popup_opened.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/_opened/popup_opened.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup-img/__close/popup-img__close.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup-img/__container/popup-img__container.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__img-container/popup__img-container.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +114,7 @@
       <workItem from="1666376773527" duration="10786000" />
       <workItem from="1666539943300" duration="3189000" />
       <workItem from="1674675873614" duration="10177000" />
-      <workItem from="1674762077882" duration="8337000" />
+      <workItem from="1674762077882" duration="9871000" />
     </task>
     <task id="LOCAL-00001" summary="Александра Дударева. Проектная работа 4, версия 1.">
       <created>1664061164283</created>
@@ -295,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674772155102</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Александра Дударева. Проектная работа 5, версия 2.">
+      <created>1674772692734</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1674772692734</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
