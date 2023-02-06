@@ -1,21 +1,21 @@
-const PopupOpenButtonEdit = document.querySelector('.profile__edit-button');
+const popupOpenButtonEdit = document.querySelector('.profile__edit-button');
 const profilePopup = document.querySelector('#profilePopup');
-const popupCloseButton = document.querySelector('.popup__close-button');
+const imagePopup = document.querySelector("#imagePopup");
+const cardAddPopup = document.querySelector('#addCardPopup');
 const profileName = document.querySelector('.profile__name');
 const profileStatus = document.querySelector('.profile__status');
 const profileForm = document.querySelector('.form');
 const inputName = profileForm.querySelector('.form__input_type_name');
 const inputStatus = profileForm.querySelector('.form__input_type_status');
-const imagePopup = document.querySelector("#imagePopup");
+const profilePopupCloseButton = document.querySelector('#profilePopupCloseButton');
 const imagePopupCloseButton = document.querySelector("#imagePopupCloseButton");
-const addCardPopupCloseButton = document.querySelector("#addPopupCloseButton");
+const cardPopupCloseButton = document.querySelector("#addPopupCloseButton");
 const cardsContainer = document.querySelector('.elements');
-const templateElement = document.querySelector('#template');
-const PopupOpenButtonAdd = document.querySelector('.profile__add-button');
-const CardPopupAdd = document.querySelector('#addCardPopup');
+const templateElement = document.querySelector('#template').content.querySelector('.element');
+const popupOpenButtonAdd = document.querySelector('.profile__add-button');
 const inputPlaceName = document.querySelector('.form__input_place-name');
 const inputPlaceLink = document.querySelector('.form__input_type_link');
-const CardFormAdd = document.querySelector('#addCardForm');
+const cardFormAdd = document.querySelector('#addCardForm');
 
 const initialCards = [
     {
@@ -44,8 +44,7 @@ const initialCards = [
     }
 ];
 
-/*ПР 4*/
-const togglePopup = function (popup) {
+const popupToggle = function (popup) {
     popup.classList.toggle('popup_opened');
 }
 
@@ -53,7 +52,7 @@ const editPopupOpenHandler = function () {
     inputName.value = profileName.textContent;
     inputStatus.value = profileStatus.textContent;
 
-    togglePopup(profilePopup);
+    popupToggle(profilePopup);
 }
 
 const formSubmitHandlerProfile = function (evt) {
@@ -62,11 +61,7 @@ const formSubmitHandlerProfile = function (evt) {
     profileName.textContent = inputName.value;
     profileStatus.textContent = inputStatus.value;
 
-    togglePopup();
-}
-
-const closeImageToggle = function () {
-    imagePopup.classList.toggle('popup_opened');
+    popupToggle(profilePopup);
 }
 
 const toggleLike = function (e) {
@@ -82,19 +77,20 @@ const handleDeleteItem = (e) => {
 openImagePopup = (name, link) => {
     imagePopup.querySelector('.popup__img-title').textContent = name;
     imagePopup.querySelector('.popup__img-photo').src = link;
-    togglePopup(imagePopup);
+    popupToggle(imagePopup);
 };
 
 createItemNode = (name, link) => {
-    const currentItem = templateElement.content.querySelector('.element').cloneNode(true);
+    const currentItem = templateElement.cloneNode(true);
     const currentName = currentItem.querySelector('.element__text');
-    const currentLink = currentItem.querySelector('.element__image');
+    const currentImage = currentItem.querySelector('.element__image');
     const buttonDelete = currentItem.querySelector('.element__delete-button');
     const buttonLike = currentItem.querySelector('.element__like-button');
     const imagePopupOpenButton = currentItem.querySelector('#elementImage');
 
     currentName.textContent = name;
-    currentLink.src = link;
+    currentImage.src = link;
+    currentImage.alt = name;
 
     buttonLike.addEventListener('click', toggleLike);
     imagePopupOpenButton.addEventListener('click', () => openImagePopup(name, link));
@@ -112,11 +108,6 @@ render = () => {
 
 render();
 
-
-const closeAllPopups = function () {
-    document.querySelector('.popup_opened').classList.remove('popup_opened');
-}
-
 addNewCard = function (evt) {
     evt.preventDefault();
 
@@ -125,21 +116,27 @@ addNewCard = function (evt) {
     const newCard = createItemNode(name, link);
     cardsContainer.prepend(newCard);
 
-    closeAllPopups();
+    popupToggle(cardAddPopup);
 }
 
 profileForm.addEventListener('submit', formSubmitHandlerProfile);
 
-PopupOpenButtonEdit.addEventListener('click', editPopupOpenHandler);
+popupOpenButtonEdit.addEventListener('click', editPopupOpenHandler);
 
-imagePopupCloseButton.addEventListener('click', closeAllPopups);
-
-popupCloseButton.addEventListener('click', closeAllPopups);
-
-addCardPopupCloseButton.addEventListener('click', closeAllPopups);
-
-PopupOpenButtonAdd.addEventListener('click', () => {
-    togglePopup(CardPopupAdd)
+imagePopupCloseButton.addEventListener('click', () => {
+    popupToggle(imagePopup)
 });
 
-CardFormAdd.addEventListener('submit', addNewCard);
+profilePopupCloseButton.addEventListener('click', () => {
+    popupToggle(profilePopup)
+});
+
+cardPopupCloseButton.addEventListener('click', () => {
+    popupToggle(cardAddPopup)
+});
+
+popupOpenButtonAdd.addEventListener('click', () => {
+    popupToggle(cardAddPopup)
+});
+
+cardFormAdd.addEventListener('submit', addNewCard);
