@@ -44,7 +44,7 @@ const initialCards = [
     }
 ];
 
-const popupToggle = function (popup) {
+const togglePopup = function (popup) {
     popup.classList.toggle('popup_opened');
 }
 
@@ -52,19 +52,19 @@ const editPopupOpenHandler = function () {
     inputName.value = profileName.textContent;
     inputStatus.value = profileStatus.textContent;
 
-    popupToggle(profilePopup);
+    togglePopup(profilePopup);
 }
 
-const formSubmitHandlerProfile = function (evt) {
-    evt.preventDefault();
+const handleProfileFormSubmit = function (e) {
+    e.preventDefault();
 
     profileName.textContent = inputName.value;
     profileStatus.textContent = inputStatus.value;
 
-    popupToggle(profilePopup);
+    togglePopup(profilePopup);
 }
 
-const toggleLike = function (e) {
+const handleLikeClick = function (e) {
     const currentLikeButton = e.target.closest('.element__like-button');
     currentLikeButton.classList.toggle('element__like-button_active');
 }
@@ -77,7 +77,8 @@ const handleDeleteItem = (e) => {
 openImagePopup = (name, link) => {
     imagePopup.querySelector('.popup__img-title').textContent = name;
     imagePopup.querySelector('.popup__img-photo').src = link;
-    popupToggle(imagePopup);
+    imagePopup.querySelector('.popup__img-photo').alt = name;
+    togglePopup(imagePopup);
 };
 
 createItemNode = (name, link) => {
@@ -92,7 +93,7 @@ createItemNode = (name, link) => {
     currentImage.src = link;
     currentImage.alt = name;
 
-    buttonLike.addEventListener('click', toggleLike);
+    buttonLike.addEventListener('click', handleLikeClick);
     imagePopupOpenButton.addEventListener('click', () => openImagePopup(name, link));
     buttonDelete.addEventListener('click', handleDeleteItem);
 
@@ -116,27 +117,27 @@ addNewCard = function (evt) {
     const newCard = createItemNode(name, link);
     cardsContainer.prepend(newCard);
 
-    popupToggle(cardAddPopup);
+    togglePopup(cardAddPopup);
 }
 
-profileForm.addEventListener('submit', formSubmitHandlerProfile);
+profileForm.addEventListener('submit', handleProfileFormSubmit);
 
 popupOpenButtonEdit.addEventListener('click', editPopupOpenHandler);
 
 imagePopupCloseButton.addEventListener('click', () => {
-    popupToggle(imagePopup)
+    togglePopup(imagePopup)
 });
 
 profilePopupCloseButton.addEventListener('click', () => {
-    popupToggle(profilePopup)
+    togglePopup(profilePopup)
 });
 
 cardPopupCloseButton.addEventListener('click', () => {
-    popupToggle(cardAddPopup)
+    togglePopup(cardAddPopup)
 });
 
 popupOpenButtonAdd.addEventListener('click', () => {
-    popupToggle(cardAddPopup)
+    togglePopup(cardAddPopup)
 });
 
 cardFormAdd.addEventListener('submit', addNewCard);
