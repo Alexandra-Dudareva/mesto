@@ -36,10 +36,28 @@
     <div class="popup__container">
         <button class="popup__close-button" type="button" aria-label="Закрыть" id="profilePopupCloseButton"></button>
         <h2 class="popup__title">Редактировать&nbsp;профиль</h2>
-        <form class="form" id="profileForm" name="profileForm">
+        <form class="form" id="profileForm" name="profileForm" novalidate>
             <div class="form__inputs">
-                <input class="form__input form__input_type_name" type="text" name="name" placeholder="Имя" required>
-                <input class="form__input form__input_type_status" type="text" name="status" placeholder="Статус" required>
+                <input
+                        id = "input-name"
+                        class="form__input form__input_type_name"
+                        type="text"
+                        name="name"
+                        minlength="2"
+                        maxlength="40"
+                        placeholder="Имя"
+                        required>
+                <span id = "input-name-error" class="form__input-error"></span>
+                <input
+                        id = "input-status"
+                        class="form__input form__input_type_status"
+                        type="text"
+                        name="status"
+                        minlength="2"
+                        maxlength="200"
+                        placeholder="Статус"
+                        required>
+                <span id = "input-status-error" class="form__input-error"></span>
             </div>
             <button class="form__save-button" type="submit">Сохранить</button>
         </form>
@@ -48,7 +66,7 @@
 <div class="popup" id="imagePopup">
     <div class="popup__img-container">
         <img class="popup__img-photo" src="#" alt="Фото">
-        <button class="popup__close-button" id="imagePopupCloseButton"  type="button" aria-label="Закрыть"></button>
+        <button class="popup__close-button" id="imagePopupCloseButton" type="button" aria-label="Закрыть"></button>
         <h2 class="popup__img-title"></h2>
     </div>
 </div>
@@ -56,12 +74,28 @@
     <div class="popup__container">
         <button class="popup__close-button" id="addPopupCloseButton" type="button" aria-label="Закрыть"></button>
         <h2 class="popup__title">Новое место</h2>
-        <form class="form" id="addCardForm" name="addPhotoForm">
+        <form class="form" id="addCardForm" name="addPhotoForm" novalidate>
             <div class="form__inputs">
-                <input class="form__input form__input_place-name" type="text" name="place-name" placeholder="Название" required>
-                <input class="form__input form__input_type_link" type="url" name="link" placeholder="Ссылка на картинку" required>
+                <input
+                        id = "input-place"
+                        class="form__input form__input_place-name"
+                        type="text"
+                        name="place-name"
+                        minlength="2"
+                        maxlength="30"
+                        placeholder="Название"
+                        required>
+                <span id = "input-place-error" class="form__input-error"></span>
+                <input
+                        id = "input-link"
+                        class="form__input form__input_type_link"
+                        type="url"
+                        name="link"
+                        placeholder="Ссылка на картинку"
+                        required>
+                <span id = "input-link-error" class="form__input-error"></span>
             </div>
-            <button class="form__save-button"  type="submit">Создать</button>
+            <button class="form__save-button" type="submit">Создать</button>
         </form>
     </div>
 </div>
@@ -78,6 +112,7 @@
         </div>
     </div>
 </template>
+<script src="scripts/validate.js"></script>
 <script src="scripts/index.js"></script>
 </body>
 </html>

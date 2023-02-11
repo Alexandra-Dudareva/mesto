@@ -23,6 +23,10 @@
     margin-top: 0;
 }
 
+/*.form__input:invalid{
+    color: #FF0000;
+}*/
+
 @media screen and (max-width: 797px) {
     .form__input {
         width: 238px;
