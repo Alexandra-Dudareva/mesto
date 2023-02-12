@@ -120,24 +120,48 @@ addNewCard = function (evt) {
     togglePopup(cardAddPopup);
 }
 
-profileForm.addEventListener('submit', handleProfileFormSubmit);
+/*Закрытие на Esc*/
 
-popupOpenButtonEdit.addEventListener('click', editPopupOpenHandler);
-
-imagePopupCloseButton.addEventListener('click', () => {
-    togglePopup(imagePopup)
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+        togglePopup(profilePopup);
+        hideModal()
+    }
 });
 
-profilePopupCloseButton.addEventListener('click', () => {
-    togglePopup(profilePopup)
-});
+/*Закрытие на оверлей*/
 
-cardPopupCloseButton.addEventListener('click', () => {
-    togglePopup(cardAddPopup)
-});
+const closeModal = event => {
+    const target = event.target;
 
-popupOpenButtonAdd.addEventListener('click', () => {
-    togglePopup(cardAddPopup)
-});
+    if (target === profilePopup) {
+    profilePopup.style.visibility = 'hidden';
+    profilePopup.style.opacity = 0;
+    }
+}
 
-cardFormAdd.addEventListener('submit', addNewCard);
+
+
+    profileForm.addEventListener('submit', handleProfileFormSubmit);
+
+    popupOpenButtonEdit.addEventListener('click', editPopupOpenHandler);
+
+    imagePopupCloseButton.addEventListener('click', () => {
+        togglePopup(imagePopup)
+    });
+
+    profilePopupCloseButton.addEventListener('click', () => {
+        togglePopup(profilePopup)
+    });
+
+    cardPopupCloseButton.addEventListener('click', () => {
+        togglePopup(cardAddPopup)
+    });
+
+    popupOpenButtonAdd.addEventListener('click', () => {
+        togglePopup(cardAddPopup)
+    });
+
+    cardFormAdd.addEventListener('submit', addNewCard);
+
+    profilePopup.addEventListener('click', closeModal);
