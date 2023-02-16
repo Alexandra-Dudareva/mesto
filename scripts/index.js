@@ -125,6 +125,7 @@ addNewCard = function (evt) {
     cardsContainer.prepend(newCard);
 
     closePopup(cardAddPopup);
+    evt.target.reset()
 }
 
 /*Закрытие на оверлей*/
