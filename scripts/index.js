@@ -17,6 +17,8 @@ const inputPlaceName = document.querySelector('.form__input_place-name');
 const inputPlaceLink = document.querySelector('.form__input_type_link');
 const cardFormAdd = document.querySelector('#addCardForm');
 const allPopups = document.querySelectorAll('.popup');
+const popupImgTitle = document.querySelector('.popup__img-title');
+const popupImgPhoto = document.querySelector('.popup__img-photo');
 
 const initialCards = [
     {
@@ -80,9 +82,9 @@ const handleDeleteItem = (e) => {
 };
 
 openImagePopup = (name, link) => {
-    imagePopup.querySelector('.popup__img-title').textContent = name;
-    imagePopup.querySelector('.popup__img-photo').src = link;
-    imagePopup.querySelector('.popup__img-photo').alt = name;
+    popupImgTitle.textContent = name;
+    popupImgPhoto.src = link;
+    popupImgPhoto.alt = name;
     openPopup(imagePopup);
 };
 
