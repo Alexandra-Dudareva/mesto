@@ -15,9 +15,7 @@ function disableSubmit(event) {
 function handleFormInput(event, config) {
     const input = event.target;  /*находим инпут*/
     const inputId = input.id;  /*привязываем инпут через идентификатор*/
-    const errorElement = document.querySelector(`#${inputId}-error`);  /*нашли span с его id*/
-
-    console.log(errorElement);
+    const errorElement = document.querySelector(`#${inputId}-error`);  /*находим span с его id*/
 
     if (input.validity.valid) {
         input.classList.remove(config.inputErrorClass)
@@ -53,7 +51,7 @@ function toggleButton(form, config) {
 
 /*Валидация форм*/
 
-function formValidation(config) {  /*конфиг передает текст, как называются селекторы*/
+function validationForm(config) {  /*конфиг передает текст, как называются селекторы*/
     const formList = Array.from(document.querySelectorAll(config.formSelector)); /* функция находит форму*/
 
     formList.forEach((form) => {
@@ -67,5 +65,5 @@ function formValidation(config) {  /*конфиг передает текст, �
     });
 }
 
-formValidation(enableValidation);
+validationForm(enableValidation);
 

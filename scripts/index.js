@@ -19,6 +19,7 @@ const cardFormAdd = document.querySelector('#addCardForm');
 const allPopups = document.querySelectorAll('.popup');
 const popupImgTitle = document.querySelector('.popup__img-title');
 const popupImgPhoto = document.querySelector('.popup__img-photo');
+const buttonAddCard = document.querySelector("#addCardSaveButton");
 
 const initialCards = [
     {
@@ -47,12 +48,14 @@ const initialCards = [
     }
 ];
 
-const closePopup = function (popup) {
+function closePopup(popup) {
+    document.removeEventListener('keyup', closeByEscape);
     popup.classList.remove('popup_opened');
 }
 
 function openPopup(popup) {
     popup.classList.add('popup_opened');
+    document.addEventListener('keyup', closeByEscape);
 }
 
 const editPopupOpenHandler = function () {
@@ -116,6 +119,11 @@ render = () => {
 
 render();
 
+const disableAddButton = () => {
+    buttonAddCard.classList.add('form__save-button_disabled');
+    buttonAddCard.setAttribute('disabled', true);
+}
+
 addNewCard = function (evt) {
     evt.preventDefault();
 
@@ -123,7 +131,7 @@ addNewCard = function (evt) {
     const link = inputPlaceLink.value;
     const newCard = createItemNode(name, link);
     cardsContainer.prepend(newCard);
-
+    disableAddButton();
     closePopup(cardAddPopup);
     evt.target.reset()
 }
@@ -144,11 +152,14 @@ const closeModalByOverlay = () => {
 
 closeModalByOverlay();
 
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-        closePopup(document.querySelector('.popup_opened'));
+/*Закрытие на Escape*/
+
+function closeByEscape(evt) {
+    if (evt.key === 'Escape') {
+        const openedPopup = document.querySelector('.popup_opened') /*<==нашли открытый попап*/
+        closePopup(openedPopup);
     }
-});
+}
 
 profileForm.addEventListener('submit', handleProfileFormSubmit);
 
