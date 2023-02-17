@@ -4,11 +4,7 @@
     <list default="true" id="dca68fb3-6bfa-46f0-924d-a0ff1c826df9" name="Changes" comment="Александра Дударева. Проектная работа 6, версия 2.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blocks/form/__input-error/form__input-error.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/form/__input-error/form__input-error.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/form/__save-button/_disabled/form__save-button_disabled.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/form/__save-button/_disabled/form__save-button_disabled.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blocks/popup/__container/popup__container.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__container/popup__container.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/validate.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +124,8 @@
       <workItem from="1676202401607" duration="12306000" />
       <workItem from="1676404628903" duration="8935000" />
       <workItem from="1676475596556" duration="12515000" />
-      <workItem from="1676562412266" duration="17225000" />
+      <workItem from="1676562412266" duration="17613000" />
+      <workItem from="1676594630384" duration="644000" />
     </task>
     <task id="LOCAL-00001" summary="Александра Дударева. Проектная работа 4, версия 1.">
       <created>1664061164283</created>
@@ -389,7 +386,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676564504456</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Александра Дударева. Проектная работа 6, версия 2.">
+      <created>1676593739446</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1676593739446</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
