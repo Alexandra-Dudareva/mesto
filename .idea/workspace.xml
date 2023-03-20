@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dca68fb3-6bfa-46f0-924d-a0ff1c826df9" name="Changes" comment="Александра Дударева. Проектная работа 6, версия 2.">
+    <list default="true" id="dca68fb3-6bfa-46f0-924d-a0ff1c826df9" name="Changes" comment="Александра Дударева. Проектная работа 7, версия 1.">
+      <change afterPath="$PROJECT_DIR$/scripts/FormValidator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/initialCards.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/Сard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/form/__input-error/form__input-error.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/form/__input-error/form__input-error.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__container/popup__container.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__container/popup__container.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +18,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -40,7 +43,8 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Settings.JavaScript&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -125,7 +129,18 @@
       <workItem from="1676404628903" duration="8935000" />
       <workItem from="1676475596556" duration="12515000" />
       <workItem from="1676562412266" duration="17613000" />
-      <workItem from="1676594630384" duration="644000" />
+      <workItem from="1676594630384" duration="1378000" />
+      <workItem from="1677099251885" duration="1433000" />
+      <workItem from="1677945340486" duration="2198000" />
+      <workItem from="1677949398202" duration="835000" />
+      <workItem from="1678133121919" duration="1855000" />
+      <workItem from="1678194578918" duration="5122000" />
+      <workItem from="1678285099326" duration="6600000" />
+      <workItem from="1678387513489" duration="5640000" />
+      <workItem from="1679002266993" duration="1788000" />
+      <workItem from="1679153866058" duration="9976000" />
+      <workItem from="1679236014545" duration="17407000" />
+      <workItem from="1679319549647" duration="3047000" />
     </task>
     <task id="LOCAL-00001" summary="Александра Дударева. Проектная работа 4, версия 1.">
       <created>1664061164283</created>
@@ -393,7 +408,21 @@
       <option name="project" value="LOCAL" />
       <updated>1676593739446</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Александра Дударева. Проектная работа 6, версия 2.">
+      <created>1676595312836</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1676595312836</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Александра Дударева. Проектная работа 6, версия 2.">
+      <created>1676595564200</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1676595564200</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
