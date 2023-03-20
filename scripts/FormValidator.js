@@ -7,16 +7,16 @@ class FormValidator {
   enableValidation() {
     this._form.addEventListener('submit', this._preventDefault);
     this._form.addEventListener('input', () => {
-      this._toggleButton(this._form, this._config);
+      this._toggleButton();
     });
 
     this._addInputListeners(this._form, this._config);
     /*блокоруем кнопку при 1й загрузке*/
-    this._toggleButton(this._form, this._config);
+    this._toggleButton();
 
     this._form.addEventListener('reset', () => {
       setTimeout(() => {
-       this._toggleButton(this._form, this._config);
+       this._toggleButton();
       }, 0);
     });
   };
@@ -50,7 +50,7 @@ class FormValidator {
     else {
       this._input.classList.add(this._config.inputErrorClass);
       this._errorElement.textContent = this._input.validationMessage;
-    };
+    }
   };
 
   /*скрытие ошибки*/
@@ -67,12 +67,12 @@ class FormValidator {
   _toggleButton(){
     this._buttonSubmit = this._form.querySelector(this._config.submitButtonSelector);
     /*проверка валидности*/
-    this._isFormValid = this._form.checkValidity;
+    this._isFormValid = this._form.checkValidity();
     /*если форма не валидна, кнопка блокируется*/
     this._buttonSubmit.disabled = !this._isFormValid;
     /*класс заблокированной кнопки*/
     this._buttonSubmit.classList.toggle(this._config.inactiveButtonClass, !this._isFormValid);
-  };
+  }
 
   _addInputListeners(){
     this._inputList = this._form.querySelectorAll(this._config.inputSelector);
