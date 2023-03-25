@@ -84,6 +84,9 @@ const openProfilePopup = function () {
 }
 
 const openCardPopup = function () {
+    inputPlaceName.value = '';
+    inputPlaceLink.value = '';
+
     openPopup(cardAddPopup);
 
     cardFormValidator.resetValidation();
@@ -98,24 +101,28 @@ const handleProfileFormSubmit = function (e) {
     closePopup(profilePopup);
 }
 
+const createCard = function (name, link) {
+    const card = new Card(name, link, templateElement, openImagePopup);
+    return card.generateCard();
+};
+
 const handleCardFormSubmit = function (evt) {
     evt.preventDefault();
 
     const name = inputPlaceName.value;
     const link = inputPlaceLink.value;
 
-    const card = new Card(name, link, templateElement, openImagePopup);
+    const newCard = createCard(name, link);
 
-    cardsContainer.prepend(card.generateCard());
+    cardsContainer.prepend(newCard);
 
     closePopup(cardAddPopup);
 }
 
 initialCards.forEach((item) => {
-    const card = new Card(item.name, item.link, templateElement, openImagePopup);
-    const cardElement = card.generateCard();
+    const newCard = createCard(item.name, item.link);
 
-    cardsContainer.append(cardElement);
+    cardsContainer.append(newCard);
 });
 
 /*Валидация*/

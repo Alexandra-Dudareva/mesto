@@ -2,6 +2,8 @@ class FormValidator {
   constructor(config, form) {
     this._config = config;
     this._form = form;
+    this._inputList = Array.from(this._form.querySelectorAll(this._config.inputSelector));
+    this._buttonSubmit = this._form.querySelector(this._config.submitButtonSelector);
   };
 
   enableValidation() {
@@ -23,7 +25,7 @@ class FormValidator {
 
   /*очистка ошибок*/
   resetValidation() {
-    this._inputList = Array.from(this._form.querySelectorAll(this._config.inputSelector)); /*находим все инпуты*/
+    /*this._inputList = Array.from(this._form.querySelectorAll(this._config.inputSelector));*/ /*находим все инпуты*/
     /*каждому инпуту добавим обработчик*/
     this._inputList.forEach( (input) => {
       this._hideInputError(input); /*метод скроет ошибки*/
@@ -65,7 +67,7 @@ class FormValidator {
 
   /*блокировка кнопки*/
   _toggleButton(){
-    this._buttonSubmit = this._form.querySelector(this._config.submitButtonSelector);
+    /*this._buttonSubmit = this._form.querySelector(this._config.submitButtonSelector);*/
     /*проверка валидности*/
     this._isFormValid = this._form.checkValidity();
     /*если форма не валидна, кнопка блокируется*/
