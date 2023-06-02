@@ -1,9 +1,9 @@
-class Card {
-    constructor(name, link, templateSelector, handleOpenCard) {
+export default class Card {
+    constructor(name, link, templateSelector, handleCardClick) {
         this._name = name;
         this._link = link;
         this._templateSelector = templateSelector;
-        this._handleOpenCard = handleOpenCard;
+        this._handleCardClick = handleCardClick;
     }
 
     _getTemplate() {
@@ -36,7 +36,7 @@ class Card {
         });
         /*нажатие на карточку и открытие попапа с фото*/
         this._element.querySelector('.element__image').addEventListener('click', () => {
-            this._handleOpenCard(this._name, this._link);
+            this._handleCardClick(this._name, this._link)
         });
     }
 
@@ -49,5 +49,3 @@ class Card {
         this._element = null;
     }
 }
-
-export default Card;
