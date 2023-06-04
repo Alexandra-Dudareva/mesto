@@ -4,7 +4,7 @@
   "description": "**Место**",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
+    "build": "rm -rf build && webpack --mode production",
     "dev": "webpack serve"
   },
   "repository": {
@@ -18,7 +18,9 @@
     "url": "https://github.com/Alexandra-Dudareva/mesto/issues"
   },
   "homepage": "https://github.com/Alexandra-Dudareva/mesto#readme",
-  "dependencies": {},
+  "dependencies": {
+    "fs-promise": "^2.0.3"
+  },
   "devDependencies": {
     "@babel/core": "^7.22.1",
     "@babel/preset-env": "^7.22.4",
