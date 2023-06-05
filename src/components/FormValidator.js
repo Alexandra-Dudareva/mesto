@@ -12,15 +12,9 @@ class FormValidator {
       this._toggleButton();
     });
 
-    this._addInputListeners(this._form, this._config);
+    this._addInputListeners();
     /*блокоруем кнопку при 1й загрузке*/
     this._toggleButton();
-
-    this._form.addEventListener('reset', () => {
-      setTimeout(() => {
-       this._toggleButton();
-      }, 0);
-    });
   };
 
   /*очистка ошибок*/
@@ -31,7 +25,7 @@ class FormValidator {
       this._hideInputError(input); /*метод скроет ошибки*/
     });
     /*деактивируем кнопку*/
-    this._toggleButton(this._form, this._config);
+    this._toggleButton();
   };
 
   /*отмена отправки формы*/

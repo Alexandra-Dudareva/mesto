@@ -32,17 +32,14 @@ const cardFormValidator = new FormValidator(validationSettings, formAddCard);
 const userInfo = new UserInfo('profile__name', 'profile__status');
 
 
-const handleProfileFormSubmit = function () {
-    userInfo.setUserInfo(inputName.value, inputStatus.value);
+const handleProfileFormSubmit = function (item) {
+    userInfo.setUserInfo(item.name, item.status);
 
     profilePopup.close();
 }
 
-const handleCardFormSubmit = function () {
-    const name = inputPlaceName.value;
-    const link = inputPlaceLink.value;
-
-    const newCard = createCard(name, link);
+const handleCardFormSubmit = function (item) {
+    const newCard = createCard(item.place, item.link);
 
     cardsContainer.prepend(newCard);
 
@@ -69,8 +66,8 @@ const openCardPopup = function () {
     cardFormValidator.resetValidation();
 }
 
-const profilePopup = new PopupWithForm('profilePopup', () => handleProfileFormSubmit());
-const cardPopup = new PopupWithForm('addCardPopup', () => handleCardFormSubmit());
+const profilePopup = new PopupWithForm('profilePopup', (item) => handleProfileFormSubmit(item));
+const cardPopup = new PopupWithForm('addCardPopup', (item) => handleCardFormSubmit(item));
 const picturePopup = new PopupWithImage('imagePopup');
 
 
