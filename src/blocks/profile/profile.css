@@ -1,4 +1,4 @@
-.profile {
+/*.profile {
     max-width: 880px;
     background-color: black;
     margin: 0 auto;
@@ -12,6 +12,23 @@
         flex-direction: column;
         justify-content: normal;
         align-items: center;
+    }
+}*/
+
+
+.profile{
+    display: flex;
+    max-width: 880px;
+    justify-content: space-between;
+    align-items: center;
+    margin:0 auto;
+    padding:0 19px;
+}
+
+@media screen and (max-width:767px){
+    .profile{
+        flex-direction: column;
+        padding:0;
     }
 }
 
