@@ -176,8 +176,8 @@ const openCardPopup = function () {
 }
 
 const openAvatarPopup = function () {
-    avatarPopup.open();
     profileFormValidator.resetValidation();
+    avatarPopup.open();
 }
 
 const profilePopup = new PopupWithForm('profilePopup', (item) => handleProfileFormSubmit(item));
