@@ -65,9 +65,10 @@ Promise.all([
     userID = user._id;
     userInfo.setUserInfo(user.name, user.about);
     userInfo.setUserAvatar(user.avatar);
-    initialCards.forEach(card => {
+   /* initialCards.forEach(card => {
         cardList.addItem(card);
-    });
+    });*/
+    cardList.HandleCardArray(initialCards)
 }).catch((err) => {
     console.log(err);
 });

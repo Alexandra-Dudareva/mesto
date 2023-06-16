@@ -29,7 +29,7 @@ export default class Card {
         this._cardImage.alt = this._name;
         this.setLikes(this._likes);
         if (this._owner === this._userID) {
-            this._deleteButton.style.display = 'block'
+            this._deleteButton.classList.add('element__text_type_block');
         }
 
         return this._element;
