@@ -1,14 +1,17 @@
 export default class Section {
-  constructor({renderer}, containerSelector) {
-    this._renderer = renderer;
-    this._container = document.querySelector(containerSelector);
-  }
+    constructor({renderer}, containerSelector) {
+        this._renderer = renderer;
+        this._container = document.querySelector(containerSelector);
+    }
 
-  HandleCardArray(arr) {
-   arr. forEach((card)=>this.addItem(card))
-}
+    renderItems(items) {
+        items.forEach((item) => {
+            const renderedItem = this._renderer(item);
+            this._container.append(renderedItem);
+        })
+    }
 
-  addItem(card) {
-    this._container.prepend(this._renderer(card));
-  }
+    addItem(element) {
+        this._container.prepend(element);
+    }
 }

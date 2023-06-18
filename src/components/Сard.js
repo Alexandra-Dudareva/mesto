@@ -29,7 +29,7 @@ export default class Card {
         this._cardImage.alt = this._name;
         this.setLikes(this._likes);
         if (this._owner === this._userID) {
-            this._deleteButton.classList.add('element__text_type_block');
+            this._deleteButton.classList.add('element__delete-button_type_block');
         }
 
         return this._element;
@@ -39,9 +39,9 @@ export default class Card {
         this._likes = likes;
         this._likeCounter.textContent = this._likes.length;
         if (this.isLiked()) {
-            this._likeButton.classList.add('element__like-button_liked');
+            this._likeButton.classList.add('element__like-button_active');
         } else {
-            this._likeButton.classList.remove('element__like-button_liked');
+            this._likeButton.classList.remove('element__like-button_active');
         }
     }
 

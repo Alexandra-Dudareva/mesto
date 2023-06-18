@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dca68fb3-6bfa-46f0-924d-a0ff1c826df9" name="Changes" comment="Александра Дударева. Проектная работа 9, версия 2.">
-      <change afterPath="$PROJECT_DIR$/src/blocks/element/__text/_type_block/element__text_type_block.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Section.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Сard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Сard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,14 +156,7 @@
       <workItem from="1686776102294" duration="7468000" />
       <workItem from="1686783993908" duration="636000" />
       <workItem from="1686836821530" duration="948000" />
-      <workItem from="1686914825641" duration="5254000" />
-    </task>
-    <task id="LOCAL-00002" summary="Александра Дударева. Проектная работа 4, версия 1.">
-      <created>1664071572086</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1664071572086</updated>
+      <workItem from="1686914825641" duration="5791000" />
     </task>
     <task id="LOCAL-00003" summary="Александра Дударева. Проектная работа 4, версия 1.">
       <created>1664160676507</created>
@@ -505,7 +494,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686837041175</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Александра Дударева. Проектная работа 9, версия 2.">
+      <created>1686958131408</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1686958131408</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

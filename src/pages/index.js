@@ -10,12 +10,12 @@ import {API} from "../components/API";
 
 const popupOpenButtonEdit = document.querySelector('.profile__edit-button');
 const popupOpenButtonAvatar = document.querySelector(".profile__avatar-container");
+const popupOpenButtonAdd = document.querySelector('.profile__add-button');
 const formEditProfile = document.querySelector('#formEditProfile');
 const formAddCard = document.querySelector('#formAddCard');
 const inputName = formEditProfile.querySelector('.form__input_type_name');
 const inputStatus = formEditProfile.querySelector('.form__input_type_status');
 const templateElement = document.querySelector('#template').content.querySelector('.element');
-const popupOpenButtonAdd = document.querySelector('.profile__add-button');
 const inputPlaceName = document.querySelector('.form__input_place-name');
 const inputPlaceLink = document.querySelector('.form__input_type_link');
 const validationSettings = {
@@ -59,7 +59,6 @@ Promise.all([
     api.getProfile(),
     api.getInitialCards()
 ]).then((result) => {
-    console.log(result)
     const user = result[0];
     const initialCards = result[1];
     userID = user._id;
@@ -68,7 +67,7 @@ Promise.all([
    /* initialCards.forEach(card => {
         cardList.addItem(card);
     });*/
-    cardList.HandleCardArray(initialCards)
+    cardList.renderItems(initialCards)
 }).catch((err) => {
     console.log(err);
 });
@@ -118,21 +117,21 @@ const deleteCard = (card) => {
 /*Popups*/
 
 const handleProfileFormSubmit = function (item) {
-    document.querySelector('.popup__save-button').textContent = 'Сохранение...';
+    document.querySelector('.form__save-button').textContent = 'Сохранение...';
     api.patchProfile(item).then((res) => {
         userInfo.setUserInfo(res.name, res.about);
         profilePopup.close();
     }).catch((err) => {
         console.log(err);
     }).finally(() => {
-        document.querySelector('.popup__save-button').textContent = 'Сохранить';
+        document.querySelector('.form__save-button').textContent = 'Сохранить';
     });
 }
 
 const handleCardFormSubmit = function (item) {
     document.querySelector('.form__save-button').textContent = 'Сохранение...';
     api.postCard(item).then((res) => {
-        cardList.addItem(res);
+        cardList.addItem(createCard(res));
         cardPopup.close();
     }).catch((err) => {
         console.log(err);
@@ -205,6 +204,8 @@ profilePopup.setEventListeners();
 cardPopup.setEventListeners();
 
 picturePopup.setEventListeners();
+
+avatarPopup.setEventListeners();
 
 
 

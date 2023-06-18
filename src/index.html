@@ -42,7 +42,7 @@
         <form class="form" id="formEditProfile" name="profileForm" novalidate>
             <div class="form__inputs">
                 <input
-                        id = "input-name"
+                        id="input-name"
                         class="form__input form__input_type_name"
                         type="text"
                         name="name"
@@ -50,17 +50,17 @@
                         maxlength="40"
                         placeholder="Имя"
                         required>
-                <span id = "input-name-error" class="form__input-error"></span>
+                <span id="input-name-error" class="form__input-error"></span>
                 <input
-                        id = "input-status"
+                        id="input-status"
                         class="form__input form__input_type_status"
                         type="text"
-                        name="status"
+                        name="about"
                         minlength="2"
                         maxlength="200"
                         placeholder="Статус"
                         required>
-                <span id = "input-status-error" class="form__input-error"></span>
+                <span id="input-status-error" class="form__input-error"></span>
             </div>
             <button class="form__save-button" type="submit">Сохранить</button>
         </form>
@@ -80,7 +80,7 @@
         <form class="form" id="formAddCard" name="addPhotoForm" novalidate>
             <div class="form__inputs">
                 <input
-                        id = "input-place"
+                        id="input-place"
                         class="form__input form__input_place-name"
                         type="text"
                         name="place"
@@ -88,45 +88,45 @@
                         maxlength="30"
                         placeholder="Название"
                         required>
-                <span id = "input-place-error" class="form__input-error"></span>
+                <span id="input-place-error" class="form__input-error"></span>
                 <input
-                        id = "input-link"
+                        id="input-link"
                         class="form__input form__input_type_link"
                         type="url"
                         name="link"
                         placeholder="Ссылка на картинку"
                         required>
-                <span id = "input-link-error" class="form__input-error"></span>
+                <span id="input-link-error" class="form__input-error"></span>
             </div>
             <button class="form__save-button" id="addCardSaveButton" type="submit">Создать</button>
         </form>
     </div>
-
-    <div class="popup" id="popup_avatar">
-        <div class="popup__container">
-            <button class="popup__close-button" id="popupAvatarCloseButton" type="button" aria-label="Закрыть"></button>
-            <h2 class="popup__title">Обновить аватар</h2>
-            <form class="form" name="avatar-content" novalidate>
-                <input class="popup__inputs popup__inputs_type_avatar"
-                       id="avatar-input"
-                       type="url"
-                       name="avatar"
-                       placeholder="Ссылка на картинку"
-                       required>
-                <span id = "popup_avatar-error" class="form__input-error"></span>
-                <button type="submit" class="form__save-button popup__create-button">Сохранить</button>
-            </form>
-        </div>
+</div>
+<div class="popup" id="popup_avatar">
+    <div class="popup__container">
+        <button class="popup__close-button" id="popupAvatarCloseButton" type="button" aria-label="Закрыть"></button>
+        <h2 class="popup__title">Обновить аватар</h2>
+        <form class="form" name="avatar-content" novalidate>
+            <input class="form__input"
+                   id="avatar-input"
+                   type="url"
+                   name="avatar"
+                   placeholder="Ссылка на картинку"
+                   required>
+            <span id="popup_avatar-error" class="form__input-error"></span>
+            <button type="submit" class="form__save-button popup__create-button">Сохранить</button>
+        </form>
     </div>
+</div>
 
-    <div class="popup" id="popup_delete">
-        <div class="popup__container">
-            <button class="popup__close-button" id="popupDeleteCloseButton" type="button" aria-label="Закрыть"></button>
-            <h2 class="popup__title">Вы уверены?</h2>
-            <form class="form" name="confirmation" novalidate><button type="submit" class="form__save-button popup__create-button popup__delete-button">Да</button></form>
-        </div>
+<div class="popup" id="popup_delete">
+    <div class="popup__container">
+        <button class="popup__close-button" id="popupDeleteCloseButton" type="button" aria-label="Закрыть"></button>
+        <h2 class="popup__title">Вы уверены?</h2>
+        <form class="form" name="confirmation" novalidate>
+            <button type="submit" class="form__save-button popup__create-button popup__delete-button">Да</button>
+        </form>
     </div>
-
 </div>
 <footer class="footer">
     <p class="footer__text">© 2020 Mesto Russia</p>
