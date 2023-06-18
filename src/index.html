@@ -106,14 +106,14 @@
     <div class="popup__container">
         <button class="popup__close-button" id="popupAvatarCloseButton" type="button" aria-label="Закрыть"></button>
         <h2 class="popup__title">Обновить аватар</h2>
-        <form class="form" name="avatar-content" novalidate>
+        <form class="form" name="avatar-content" id="formEditAvatar" novalidate>
             <input class="form__input"
                    id="avatar-input"
                    type="url"
                    name="avatar"
                    placeholder="Ссылка на картинку"
                    required>
-            <span id="popup_avatar-error" class="form__input-error"></span>
+            <span id="avatar-input-error" class="form__input-error"></span>
             <button type="submit" class="form__save-button popup__create-button">Сохранить</button>
         </form>
     </div>

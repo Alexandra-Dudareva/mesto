@@ -13,6 +13,7 @@ const popupOpenButtonAvatar = document.querySelector(".profile__avatar-container
 const popupOpenButtonAdd = document.querySelector('.profile__add-button');
 const formEditProfile = document.querySelector('#formEditProfile');
 const formAddCard = document.querySelector('#formAddCard');
+const formEditAvatar = document.querySelector('#formEditAvatar')
 const inputName = formEditProfile.querySelector('.form__input_type_name');
 const inputStatus = formEditProfile.querySelector('.form__input_type_status');
 const templateElement = document.querySelector('#template').content.querySelector('.element');
@@ -31,6 +32,7 @@ const api = new API(`https://mesto.nomoreparties.co/v1/cohort-68`, `27f98441-ef4
 
 const profileFormValidator = new FormValidator(validationSettings, formEditProfile);
 const cardFormValidator = new FormValidator(validationSettings, formAddCard);
+const avatarFormValidator = new FormValidator(validationSettings, formEditAvatar);
 
 
 const userInfo = new UserInfo('profile__name', 'profile__status', 'profile__avatar');
@@ -64,9 +66,6 @@ Promise.all([
     userID = user._id;
     userInfo.setUserInfo(user.name, user.about);
     userInfo.setUserAvatar(user.avatar);
-   /* initialCards.forEach(card => {
-        cardList.addItem(card);
-    });*/
     cardList.renderItems(initialCards)
 }).catch((err) => {
     console.log(err);
@@ -117,31 +116,31 @@ const deleteCard = (card) => {
 /*Popups*/
 
 const handleProfileFormSubmit = function (item) {
-    document.querySelector('.form__save-button').textContent = 'Сохранение...';
+    formEditProfile.querySelector('.form__save-button').textContent = 'Сохранение...';
     api.patchProfile(item).then((res) => {
         userInfo.setUserInfo(res.name, res.about);
         profilePopup.close();
     }).catch((err) => {
         console.log(err);
     }).finally(() => {
-        document.querySelector('.form__save-button').textContent = 'Сохранить';
+        formEditProfile.querySelector('.form__save-button').textContent = 'Сохранить';
     });
 }
 
 const handleCardFormSubmit = function (item) {
-    document.querySelector('.form__save-button').textContent = 'Сохранение...';
+    formAddCard.querySelector('.form__save-button').textContent = 'Сохранение...';
     api.postCard(item).then((res) => {
         cardList.addItem(createCard(res));
         cardPopup.close();
     }).catch((err) => {
         console.log(err);
     }).finally(() => {
-        document.querySelector('.form__save-button').textContent = 'Создать';
+        formAddCard.querySelector('.form__save-button').textContent = 'Создать';
     });
 }
 
 const handleAvatarFormSubmit = function (item) {
-    document.querySelector('.form__save-button').textContent = 'Сохранение...';
+    formEditAvatar.querySelector('.form__save-button').textContent = 'Сохранение...';
     api.patchAvatar(item)
         .then((res) => {
             userInfo.setUserAvatar(res.avatar);
@@ -151,7 +150,7 @@ const handleAvatarFormSubmit = function (item) {
             console.log(err);
         })
         .finally(() => {
-            document.querySelector('.form__save-button').textContent = 'Сохраннить';
+            formEditAvatar.querySelector('.form__save-button').textContent = 'Сохраннить';
         });
 }
 
@@ -190,6 +189,7 @@ const confirmation = new PopupWithConfirmation('popup_delete');
 
 profileFormValidator.enableValidation();
 cardFormValidator.enableValidation();
+avatarFormValidator.enableValidation();
 
 popupOpenButtonEdit.addEventListener('click', openProfilePopup);
 
